@@ -1,12 +1,12 @@
+
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
+
 class ProductDetailsPage extends StatelessWidget {
 
- static const name = 'product_details';
-
-  const ProductDetailsPage({
-    super.key,
+   const ProductDetailsPage({
+    super.key
   });
 
   @override
@@ -32,25 +32,29 @@ class ProductDetailsPage extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
+
                   Container(
                     height: 390,
-                    width: 340,
+                    width: 300,
                     decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 43, 41, 41),
+                        color: Color.fromARGB(255, 37, 21, 21),
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(40),
-                            bottomRight: Radius.circular(40))),
+                            bottomRight: Radius.circular(40),),),
                   ),
+
                   const SizedBox(width: 10),
+
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 20),
+                    padding: const EdgeInsets.only(bottom: 20, left: 20),
                     child: Column(
                       children: const [
+
                         Text('Kcal'),
                         Text(
                           '130',
                           style: TextStyle(
-                            color: Color.fromARGB(255, 43, 41, 41),
+                            color: Color.fromARGB(255, 37, 21, 21),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -59,13 +63,13 @@ class ProductDetailsPage extends StatelessWidget {
                         Text(
                           '250g',
                           style: TextStyle(
-                            color: Color.fromARGB(255, 43, 41, 41),
+                            color: Color.fromARGB(255, 37, 21, 21),
                             fontWeight: FontWeight.bold,
                           ),
                         )
                       ],
                     ),
-                  )
+                  ), 
                 ],
               ),
           
@@ -75,7 +79,7 @@ class ProductDetailsPage extends StatelessWidget {
                 child: Text(
                   'Details',
                   style: TextStyle(
-                      color: Color.fromARGB(255, 43, 41, 41),
+                      color: Color.fromARGB(255, 37, 21, 21),
                       fontWeight: FontWeight.bold,
                       fontSize: 17),
                 ),
@@ -116,7 +120,7 @@ class ProductDetailsPage extends StatelessWidget {
                           const Text(
                             '123 Reviews',
                             style: TextStyle(
-                                color: Color.fromARGB(255, 43, 41, 41),
+                                color: Color.fromARGB(255, 37, 21, 21),
                                 fontWeight: FontWeight.bold,
                                 fontSize: 17),
                           )
@@ -128,7 +132,7 @@ class ProductDetailsPage extends StatelessWidget {
                         height: 60,
                         width: 40,
                         decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 43, 41, 41),
+                          color: Color.fromARGB(255, 37, 21, 21),
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(40),
                             bottomLeft: Radius.circular(40),
@@ -160,12 +164,12 @@ class ProductDetailsPage extends StatelessWidget {
           Positioned(
             top: 20,
             left: 10,
-            child: FadeInRightBig(
-              duration:const Duration( milliseconds: 1500),
+            child: FadeInLeft(
+              duration: const Duration(seconds: 1),
               child: Image.asset(
-                'assets/img/prato.png',
-                height: 360,
-                width: 400,
+                'assets/img/gg.png',
+                height: 380,
+                width: 460,
               ),
             ),
            ),

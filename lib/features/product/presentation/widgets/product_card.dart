@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+
+
+
+
 class ProductCard extends StatelessWidget {
 
- String path;
+ String image;
  String name;
 
-   ProductCard({super.key, required this.path, required this.name});
+ ProductCard({super.key, required this.image, required this.name});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap:(){
         context.push('/product_details');
       },
       child: Stack(
         children: [
-    
+        
           Container(
             height: 210,
             width: 500,
@@ -36,25 +40,27 @@ class ProductCard extends StatelessWidget {
               ],
             ),
           ),
-    
-          Positioned(
-            bottom: 50,
-            left: 47,
-            child: Image.asset(
-              path,
-              height: 220,
-              width: 210,
-              fit: BoxFit.cover,
-            ),
-          ),
+        
           Positioned(
             bottom: 20,
             left: 50,
             child: Text(
               name,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
           ),
+
+          Positioned(
+            bottom: 50,
+            left: 47,
+            child: Image.asset(
+              image,
+              height: 220,
+              width: 210,
+              fit: BoxFit.cover,
+            ),
+          ),
+
           Positioned(
             top: 85,
             left: 290,
@@ -95,6 +101,7 @@ class ProductCard extends StatelessWidget {
               ],
             ),
           ),
+
           Positioned(
             top: 60,
             right: 21,
@@ -118,7 +125,8 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
             ),
-          ),
+          )
+
         ],
       ),
     );

@@ -13,13 +13,16 @@ final appRouter = GoRouter(
    
   GoRoute(
     path: '/', 
-    name: ProductsPage.name, 
-    builder: (context, state) => const ProductsPage(),
+    builder: (context, state) => const ProductHome(),
   ), 
 
   GoRoute(
+    path: '/product_category', 
+    builder: (context, state) => const ProductsPage()
+  ),
+
+  GoRoute(
     path: '/product_details', 
-    name: ProductDetailsPage.name, 
     builder: (context, state) => const ProductDetailsPage()
   )
 
